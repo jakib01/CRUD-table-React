@@ -38,7 +38,9 @@ const Home = () => {
                             <td>{product.title}</td>
                             <td>{product.description}</td>
                             <td>{product.price}</td>
-                            <td>{product.image}</td>
+                            <td>
+                                <img style={{height: "40px",width: "40px"}} src="http://127.0.0.1:8000/img/1622657691.jpg" alt="new"/>
+                            </td>
                             <td>
                                 <Link className="btn btn-primary btn-sm mr-3" to={`/users/${product.id}`}>View</Link>
                                 <Link className="btn btn-outline-primary btn-sm mr-3" to={`/api/admin/update/${product.id}`}>Edit</Link>

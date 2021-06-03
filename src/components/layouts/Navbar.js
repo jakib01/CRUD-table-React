@@ -21,7 +21,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <button className="btn btn-primary">Add Product</button>
+                <Link className="btn btn-primary" to="/products/add">Add Product</Link>
 
             </div>
         </nav>

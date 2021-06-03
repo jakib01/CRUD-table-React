@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Link} from "react-router-dom";
 
 const Home = () => {
-    const [products, setProduct] = useState([]);
+    const [product, setProduct] = useState([]);
 
     useEffect(() => {
         loadProducts();
@@ -37,7 +37,7 @@ const Home = () => {
                         </tr>
                     </thead>
                     <tbody>
-                    {products.map((product, index) => (
+                    {product.map((product, index) => (
                         <tr>
                             <th scope="row">{index + 1}</th>
                             <td>{product.title}</td>
@@ -47,12 +47,10 @@ const Home = () => {
                                 <img style={{height: "40px",width: "40px"}} src="http://127.0.0.1:8000/img/1622657691.jpg" alt="new"/>
                             </td>
                             <td>
-                                <Link className="btn btn-primary btn-sm mr-3" to={`/users/${product.id}`}>View</Link>
+                                <Link className="btn btn-primary btn-sm mr-3" to={`/products/${product.id}`}>View</Link>
+                                {/*<Link className="btn btn-primary btn-sm mr-3" to={`/product/show/${product.id}`}>View</Link>*/}
                                 <Link className="btn btn-outline-primary btn-sm mr-3" to={`/products/edit/${product.id}`}>Edit</Link>
                                 <Link className="btn btn-outline-danger btn-sm mr-3" onClick={() => deleteProduct(product.id)}>Delete</Link>
-                                {/*<Link className="btn btn-danger" onClick={() => deleteUser(user.id)}>*/}
-                                {/*    Delete*/}
-                                {/*</Link>*/}
                             </td>
                         </tr>
                     ))}

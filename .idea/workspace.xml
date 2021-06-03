@@ -21,8 +21,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../laravel/CRUD-API-Laravel" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -39,7 +41,7 @@
       <workItem from="1622649489187" duration="591000" />
       <workItem from="1622650650461" duration="10475000" />
       <workItem from="1622725521397" duration="724000" />
-      <workItem from="1622727479376" duration="7613000" />
+      <workItem from="1622727479376" duration="12152000" />
     </task>
     <servers />
   </component>

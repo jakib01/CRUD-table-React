@@ -15,6 +15,11 @@ const Home = () => {
         setProduct(result.data.reverse());
     };
 
+    const deleteProduct = async id => {
+        await axios.delete(`http://localhost:8000/api/admin/delete/${id}`);
+        loadProducts();
+    };
+
     return (
         <div className="container">
             <div className="py-4">
@@ -43,8 +48,8 @@ const Home = () => {
                             </td>
                             <td>
                                 <Link className="btn btn-primary btn-sm mr-3" to={`/users/${product.id}`}>View</Link>
-                                <Link className="btn btn-outline-primary btn-sm mr-3" to={`/api/admin/update/${product.id}`}>Edit</Link>
-                                <Link className="btn btn-outline-danger btn-sm mr-3" to={`/api/admin/delete/${product.id}`}>Delete</Link>
+                                <Link className="btn btn-outline-primary btn-sm mr-3" to={`/products/edit/${product.id}`}>Edit</Link>
+                                <Link className="btn btn-outline-danger btn-sm mr-3" onClick={() => deleteProduct(product.id)}>Delete</Link>
                                 {/*<Link className="btn btn-danger" onClick={() => deleteUser(user.id)}>*/}
                                 {/*    Delete*/}
                                 {/*</Link>*/}
@@ -58,5 +63,4 @@ const Home = () => {
         </div>
     )
 }
-
 export default Home;

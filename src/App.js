@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
 import AddProduct from "./components/products/AddProducts";
+import EditProduct from "./components/products/EditProduct";
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                   <Route exact path="/about" component={About} />
                   <Route exact path="/contact" component={Contact} />
                   <Route exact path="/products/add" component={AddProduct} />
+                  <Route exact path="/products/edit/:id" component={EditProduct} />
               </Switch>
           </div>
       </BrowserRouter>

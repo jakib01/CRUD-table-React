@@ -10,9 +10,11 @@ class AddProduct extends Component {
     titleHandleChange = e => {
         this.setState({ title: e.target.value });
     };
+
     descriptionHandleChange = e => {
         this.setState({ description: e.target.value });
     };
+
     priceHandleChange = e => {
         this.setState({ price: e.target.value });
     };
@@ -32,7 +34,6 @@ class AddProduct extends Component {
                     window.location = "/"
                 })
                 .catch(error => console.log(error));
-
         }
     };
 

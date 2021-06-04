@@ -15,10 +15,12 @@ const Product = () => {
     useEffect(() => {
         loadProduct();
     }, []);
+
     const loadProduct = async () => {
         const res = await axios.get(`http://127.0.0.1:8000/api/admin/show/${id}`);
         setProduct(res.data);
     };
+
     return (
         <div className="container py-4">
             <Link className="btn btn-primary" to="/">

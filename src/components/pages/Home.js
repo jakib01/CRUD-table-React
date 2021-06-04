@@ -27,14 +27,14 @@ const Home = () => {
 
                 <table className="table border shadow">
                     <thead className="table-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Title</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Image</th>
-                            <th scope="col">Action</th>
-                        </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Action</th>
+                    </tr>
                     </thead>
                     <tbody>
                     {product.map((product, index) => (
@@ -44,14 +44,17 @@ const Home = () => {
                             <td>{product.description}</td>
                             <td>{product.price}</td>
                             <td>
-                                <img style={{height: "40px",width: "40px"}} src="http://127.0.0.1:8000/img/1622657691.jpg" alt="new"/>
+                                <img style={{height: "40px", width: "40px"}} src={product.image} alt="new"/>
                             </td>
+
                             <td>
                                 <Link className="btn btn-primary btn-sm mr-3" to={`/products/${product.id}`}>View</Link>
-                                {/*<Link className="btn btn-primary btn-sm mr-3" to={`/product/show/${product.id}`}>View</Link>*/}
-                                <Link className="btn btn-outline-primary btn-sm mr-3" to={`/products/edit/${product.id}`}>Edit</Link>
-                                <Link className="btn btn-outline-danger btn-sm mr-3" onClick={() => deleteProduct(product.id)}>Delete</Link>
+                                <Link className="btn btn-outline-primary btn-sm mr-3"
+                                      to={`/products/edit/${product.id}`}>Edit</Link>
+                                <Link className="btn btn-outline-danger btn-sm mr-3"
+                                      onClick={() => deleteProduct(product.id)}>Delete</Link>
                             </td>
+
                         </tr>
                     ))}
                     </tbody>
@@ -61,4 +64,5 @@ const Home = () => {
         </div>
     )
 }
+
 export default Home;

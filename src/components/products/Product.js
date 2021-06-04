@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 
-const Product = () =>{
+const Product = () => {
 
     const [product, setProduct] = useState({
         title: "",
@@ -11,7 +11,7 @@ const Product = () =>{
         image: ""
     });
 
-    const { id } = useParams();
+    const {id} = useParams();
     useEffect(() => {
         loadProduct();
     }, []);
@@ -25,12 +25,12 @@ const Product = () =>{
                 back to Home
             </Link>
             <h1 className="display-4">Product Id: {id}</h1>
-            <hr />
+            <hr/>
             <ul className="list-group w-50">
                 <li className="list-group-item">Title: {product.title}</li>
                 <li className="list-group-item">Description: {product.description}</li>
                 <li className="list-group-item">Price: {product.price}</li>
-                <li className="list-group-item">Image: {product.image}</li>
+                <li className="list-group-item">Image: <img style={{height: "70px", width: "70px"}} src={product.image} alt="new"/></li>
             </ul>
         </div>
     );
